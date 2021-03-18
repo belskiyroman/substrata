@@ -1,0 +1,9 @@
+{
+  "sourceMap": true,
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "typeRoots": ["./src/types"]
+  }
+}

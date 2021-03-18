@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "da0eeb49-6bd1-41c3-b4da-9387b63a49ff",
+		"name": "substrata - test task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DB shapshot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/_health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"_health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Roman\",\n    \"username\": \"roman_belskij\",\n    \"email\": \"roman.belskij@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - get by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/users/8b2c678a-8cb9-4601-a519-190df4c6419d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"users",
+						"8b2c678a-8cb9-4601-a519-190df4c6419d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Roman\",\n    \"username\": \"roman_belskij\",\n    \"email\": \"roman.belskij@gmail.com\",\n    \"bitcoinAmount\": 0,\n    \"usdBalance\": 0,\n    \"id\": \"4c59cdfc-7d8a-4072-8982-93442164aa77\",\n    \"createdAt\": \"2021-03-17T23:33:14.130Z\",\n    \"updatedAt\": \"2021-03-17T23:33:14.131Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/users/8b2c678a-8cb9-4601-a519-190df4c6419d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"users",
+						"8b2c678a-8cb9-4601-a519-190df4c6419d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/users/8b2c678a-8cb9-4601-a519-190df4c6419d/balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"users",
+						"8b2c678a-8cb9-4601-a519-190df4c6419d",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USD balance - manage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"withdraw\",\n    \"amount\": \"0.001\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/users/8b2c678a-8cb9-4601-a519-190df4c6419d/usd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"users",
+						"8b2c678a-8cb9-4601-a519-190df4c6419d",
+						"usd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bitcoins balance - manage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"sell\",\n    \"amount\": \"0.001\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/users/8b2c678a-8cb9-4601-a519-190df4c6419d/bitcoins",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"users",
+						"8b2c678a-8cb9-4601-a519-190df4c6419d",
+						"bitcoins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bitcoin exchange rate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/bitcoin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"bitcoin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bitcoin exchange rate - update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"price\": 99.98,\n    \"updatedAt\": \"2021-03-18T00:15:40.003Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/bitcoin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"bitcoin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

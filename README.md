@@ -27,3 +27,33 @@ npm test
 npm run start:prod
 ```
 
+### Debug DB in `development` mode
+
+In `development` you have a special endpoint that returns DB snapshot.
+
+```javascript
+if (process.env.NODE_ENV === 'development') {
+  app.get('/db', showDB)
+}
+```
+
+### API doc
+
+You can use a postman collection as an API documentation and be able to call API endpoints.
+You can find a `postman_collection.json` at the root of the project.
+Just import it to a postman.
+
+### API endpoints
+
+By default PORT is 3000: `http://localhost:3000`
+
+ - GET `/db` - get snapshot of DB
+ - GET `/_health` - health check of the server
+ - POST `/v1/users` - create a new user
+ - GET `/v1/users/:userId` - get a user
+ - PUT `/v1/users/:userId` - update a user
+ - GET `/v1/users/:userId/balance` - get user balance
+ - POST `/v1/users/:userId/usd` - manage usd balance
+ - POST `/v1/users/:userId/bitcoins` - manage bitcoin balance
+ - GET `/v1/bitcoin` - get current bitcoin exchange rate
+ - PUT `/v1/bitcoin` - update bitcoin exchange rate

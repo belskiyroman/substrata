@@ -2,7 +2,7 @@ import { RequestHandler } from 'express'
 import _ from 'lodash'
 import { httpAssert } from '../../common/utils'
 import CrudService from '../../services/crudService'
-import { isUsernameFree, isEmailFree } from '../../services/userService'
+import { isEmailFree, isUsernameFree } from '../../services/userService'
 import { NewUser, User } from '../../types/entities'
 
 const UserModel = new CrudService('users')

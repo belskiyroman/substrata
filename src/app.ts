@@ -9,11 +9,11 @@ import {
   handleInternalErrors,
   handleNotFound,
 } from './controllers/error/controller'
-import requestLogger from './middlewares/requestLogger'
 import {
   contextMiddleware,
   correlationIdMiddleware,
 } from './middlewares/context'
+import requestLogger from './middlewares/requestLogger'
 
 // Special endpoint for the test task that shows the DB.
 const showDB: RequestHandler = (req, res) => res.json(db)

@@ -1,6 +1,6 @@
+import * as bigdecimal from 'bigdecimal'
 import { httpAssert } from '../common/utils'
 import { CurrencyValue } from '../types/common'
-import * as bigdecimal from 'bigdecimal'
 import { ExchangeRate } from '../types/entities'
 import CrudService from './crudService'
 import loggerService from './loggerService'

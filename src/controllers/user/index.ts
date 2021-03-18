@@ -1,7 +1,7 @@
 import express from 'express'
 import { validateIdParam } from '../../common/commonValidation'
-import { validateCreateUser, validateUpdateUser } from './validation'
 import { createUser, getUser, updateUser } from './controller'
+import { validateCreateUser, validateUpdateUser } from './validation'
 
 const userController = express.Router()
 

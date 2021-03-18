@@ -1,7 +1,7 @@
 import { celebrate, Segments } from 'celebrate'
 import Joi from 'joi'
-import commonSchema from './commonSchema'
 import { RequestHandlerFactory } from '../types/common'
+import commonSchema from './commonSchema'
 
 export const validateIdParam: RequestHandlerFactory = (paramName: string) =>
   celebrate({

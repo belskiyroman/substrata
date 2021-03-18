@@ -1,11 +1,11 @@
 import express from 'express'
 import { validateIdParam } from '../../common/commonValidation'
-import { validateUSDAction, validateCoinAction } from './validation'
 import {
-  manageUSDBalance,
-  manageBitcoinBalance,
   getBalance,
+  manageBitcoinBalance,
+  manageUSDBalance,
 } from './controller'
+import { validateCoinAction, validateUSDAction } from './validation'
 
 const userBalanceController = express.Router()
 

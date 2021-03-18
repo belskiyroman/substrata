@@ -1,8 +1,8 @@
 import {
-  handleInternalErrors,
   handleHttpError,
-  handleValidationErrors,
+  handleInternalErrors,
   handleNotFound,
+  handleValidationErrors,
 } from './controller'
 
 // Order of handlers makes sense!
